@@ -19,7 +19,7 @@ artist2 = Artist.create(name: "Rise Against")
 artist3 = Artist.create(name: "No Use For A Name")
 artist4 = Artist.create(name: "The Offspring")
 
-artist1.songs << [song1]
+artist1.songs << [song1, song5]
 artist1.save
 
 artist2.songs << [song2]
@@ -30,6 +30,3 @@ artist3.save
 
 artist4.songs << [song4]
 artist4.save
-
-artist1.songs << [song5]
-artist1.save
