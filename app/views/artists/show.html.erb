@@ -11,3 +11,5 @@
 <% else %>
   <p>This artist doesn't have any songs yet</p>
 <% end %>
+
+<%= link_to "[Delete artist]", artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } %>
