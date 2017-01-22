@@ -8,7 +8,6 @@ class ArtistsController < ApplicationController
   end
 
   def new
-
   end
 
   def destroy
@@ -19,9 +18,10 @@ class ArtistsController < ApplicationController
     redirect_to root_path
   end
 
-  def order_by_name
-    @ascending = Artist.order(name: :asc)
-    @descending = Artist.order(name: :desc)
+  def sort_asc
+    @artists = Artist.order(name: :asc)
+
+    redirect_to artists_path(@artists)
   end
 
 
