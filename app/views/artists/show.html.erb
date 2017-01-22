@@ -12,4 +12,18 @@
   <p>This artist doesn't have any songs yet</p>
 <% end %>
 
+<div>
+  <%= form_for [@artist, @artist.songs.new] do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.hidden_field :artist_id, value: @artist.id %>
+
+    <%= f.submit "Add song" %>
+  <% end %>
+</div>
+
+<hr>
+
 <%= link_to "[Delete artist]", artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" } %>
