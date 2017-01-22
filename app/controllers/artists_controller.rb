@@ -24,5 +24,11 @@ class ArtistsController < ApplicationController
     redirect_to artists_path(@artists)
   end
 
+  def sort_desc
+    @artists = Artist.order(name: :desc)
+
+    redirect_to artists_path(@artists)
+  end
+
 
 end
