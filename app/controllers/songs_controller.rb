@@ -12,13 +12,10 @@ before_action :set_artist
   end
 
   def create
-    @song = artist_id.songs.build(song_params)
+    @song = @artist.songs.build(song_params)
 
-    if @song.save
-      redirect_to @song, notice: "Song added!"
-    else
-      puts "Test"
-    end
+    @song.save
+    redirect_to artist_path(@artist), notice: "Song added!"
   end
 
   def destroy
