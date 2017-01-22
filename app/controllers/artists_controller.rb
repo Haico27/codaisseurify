@@ -19,5 +19,10 @@ class ArtistsController < ApplicationController
     redirect_to root_path
   end
 
+  def order_by_name
+    @ascending = Artist.order(name: :asc)
+    @descending = Artist.order(name: :desc)
+  end
+
 
 end

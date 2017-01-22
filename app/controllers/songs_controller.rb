@@ -29,7 +29,7 @@ before_action :set_artist
     private
 
     def set_artist
-      @artist = Artist.find(params[:id])
+      @artist = Artist.find(params[:artist_id])
     end
 
     def song_params
