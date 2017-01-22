@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-before_action :set_song
+before_action :set_artist
 
 
   def index
@@ -9,7 +9,6 @@ before_action :set_song
   end
 
   def new
-    @song = artist_id.songs.build
   end
 
   def create
@@ -27,13 +26,13 @@ before_action :set_song
 
     @song.destroy
 
-    redirect_to artist_path
+    redirect_to artist_path(@artist)
   end
 
     private
 
-    def set_song
-      @song = Song.find(params[:id])
+    def set_artist
+      @artist = Artist.find(params[:id])
     end
 
     def song_params
