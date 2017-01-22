@@ -5,9 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Song.delete_all
 Photo.delete_all
+Song.delete_all
 Artist.delete_all
 
 # Songs
@@ -26,8 +25,8 @@ photo4 = Photo.create(remote_image_url: "http://res.cloudinary.com/dzgzbs3of/ima
 photo5 = Photo.create(remote_image_url: "http://res.cloudinary.com/dzgzbs3of/image/upload/v1485086317/johnbutlertrio_d3dvv6.jpg")
 
 # Artists
-artist1 = Artist.create(name: "Bad Religion", songs: [song1, song5])
-artist2 = Artist.create(name: "Rise Against", songs: [song2])
-artist3 = Artist.create(name: "No Use For A Name", songs: [song3])
-artist4 = Artist.create(name: "The Offspring", songs: [song4])
-artist5 = Artist.create(name: "John Butler Trio", songs: [song6])
+artist1 = Artist.create(name: "Bad Religion", songs: [song1, song5], photo: photo1)
+artist2 = Artist.create(name: "Rise Against", songs: [song2], photo: photo2)
+artist3 = Artist.create(name: "No Use For A Name", songs: [song3], photo: photo3)
+artist4 = Artist.create(name: "The Offspring", songs: [song4], photo: photo4)
+artist5 = Artist.create(name: "John Butler Trio", songs: [song6], photo: photo5)

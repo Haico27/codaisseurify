@@ -2,6 +2,7 @@
 
 <% @artists.each do |artist| %>
   <p><%= link_to artist.name, artist_path(artist.id) %></p>
+  <div><%= image_tag artist.photo.image.thumbnail %></div>
 <% end %>
 
 <hr>
